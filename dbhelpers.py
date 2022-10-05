@@ -47,8 +47,8 @@ def run_statement(statement, list_of_args=[]):
     close_connection(cursor)
     return results   
 
-def make_api(statement):
-    results = run_statement(statement)
+def make_api(statement, list_of_args=[]):
+    results = run_statement(statement, list_of_args)
     if (type(results) == list):
         animal_json = json.dumps(results, default=str)
         return animal_json

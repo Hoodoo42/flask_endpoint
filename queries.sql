@@ -6,3 +6,4 @@ INSERT INTO clients (username, password, loyalty_points, joined_on) VALUES('user
 SELECT username, loyalty_points, joined_on FROM clients;
 
 CALL get_client_info();
+CALL points_filter(100); 
